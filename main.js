@@ -57,6 +57,7 @@ setInterval(
 
 function handleClick(e){
 
+if(screen.innerHTML.length <= 9){
     switch (e.target.innerHTML) {
         case 'C':
             screen.innerHTML = 0
@@ -127,6 +128,14 @@ function handleClick(e){
             else{
                 screen.innerHTML += e.target.innerHTML
             }
+        }
+    }
+    else{
+        switch (e.target.innerHTML) {
+            case 'C':
+                screen.innerHTML = 0
+            break;
+        }
     }
 }
 
