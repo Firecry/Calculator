@@ -44,16 +44,21 @@ function dragElement(elmnt) {
     }
   }
 
+  let colorHex = 0
+
 setInterval(
     ()=>{
-            const colorHex = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            // const colorHex = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+            colorHex++
+            colorHex >= 360 ? colorHex = 0 : 0
     
-            screen.style.backgroundColor = colorHex
+            screen.style.backgroundColor = `hsl(${colorHex}, 100%, 50%)`
             buttons.forEach(button=>{
-                button.style.border = `1px solid ${colorHex}`
-                button.style.color = `${colorHex}`
+                button.style.border = `1px solid hsl(${colorHex}, 100%, 50%)`
+                button.style.color = `hsl(${colorHex}, 100%, 50%)`
             })
-}, 1500)
+}, 10)
+
 
 function handleClick(e){
 

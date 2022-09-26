@@ -23,7 +23,7 @@ html, body{
     font-size: 6rem;
     color: rgb(0, 0, 0);
     padding: 0px 20px;
-    transition: background 1.5s;
+    transition: background .3s;
     max-height: 130px;
 }
 
@@ -40,7 +40,7 @@ html, body{
     padding: 35px;
     cursor: pointer;
     color: rgb(247, 0, 255);
-    transition: border 1.5s, color 1.5s, background 100ms;
+    transition: border .3s, color .3s, background 100ms;
 }
 #button:hover{
     background: rgb(29, 29, 29);
